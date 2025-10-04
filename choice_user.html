@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Prep Portal</title>
+  <link rel="stylesheet" href="choice_user.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 Career Prep Portal</h1>
+
+    <label for="path">Choose your path:</label>
+    <select id="path" onchange="handlePathChange()">
+      <option value="">-- Select --</option>
+      <option value="job">Job</option>
+      <option value="higher-studies">Higher Studies</option>
+    </select>
+
+    <!-- Job Section -->
+    <div id="job-section" style="display: none;">
+      <label for="resume">Upload Resume (PDF only):</label>
+      <input type="file" id="resume" accept=".pdf" />
+
+      <label for="job-desc">Enter Job Description:</label>
+      <textarea id="job-desc" placeholder="e.g., Data Scientist, Frontend Developer"></textarea>
+    </div>
+
+    <!-- Higher Studies Section -->
+    <div id="study-section" style="display: none;">
+      <label for="field">Enter Field of Study:</label>
+      <input type="text" id="field" placeholder="e.g., Computer Science, MBA" />
+    </div>
+
+    <button onclick="submitForm()">Submit</button>
+    <div id="output"></div>
+  </div>
+
+  <script src="choice_user.js"></script>
+</body>
+</html>

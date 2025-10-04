@@ -1,0 +1,46 @@
+/* The .active and .screen classes are for a different navigation method but can be kept. */
+.screen { display: none; }
+.active { display: block; }
+
+
+/* --- NEW: Fade-in and slide-up animation for the main login card --- */
+.card-enter-animation {
+    /* Apply the 'card-enter' animation, taking 0.8 seconds */
+    animation: card-enter 0.8s ease-out forwards;
+}
+
+@keyframes card-enter {
+    /* The animation starts here: invisible and slightly down */
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+    /* The animation ends here: fully visible and in its final position */
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+/* ----------------------------------------------------------------- */
+
+
+/* --- NEW: Subtle pulse animation for the Google button on hover --- */
+/* This style only applies when you move your mouse over the Google button */
+#google-signin-btn:hover {
+    /* Apply the 'pulse' animation, making it loop infinitely */
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); /* Blue shadow, fully visible */
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); /* Blue shadow, faded out */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); /* Blue shadow, gone */
+    }
+}
+/* ------------------------------------------------------------------ */
+

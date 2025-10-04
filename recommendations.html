@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recommended YouTube Channels</title>
+  <link rel="stylesheet" href="choice_user.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 Recommended YouTube Channels</h1>
+    <div id="recommendations"></div>
+  </div>
+
+  <script>
+    // Get recommendations from localStorage
+    const recommendationsDiv = document.getElementById("recommendations");
+    const videoLinks = localStorage.getItem("ytRecommendations");
+
+    if (videoLinks) {
+      recommendationsDiv.innerHTML = videoLinks;
+    } else {
+      recommendationsDiv.innerHTML = "<p>No recommendations found.</p>";
+    }
+  </script>
+</body>
+</html>
